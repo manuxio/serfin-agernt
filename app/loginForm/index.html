@@ -1,0 +1,57 @@
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <link rel="stylesheet" href="jquery-ui.min.css">
+  <!-- <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script> -->
+  <script>window.$ = window.jQuery = require('./jquery.min.js');</script>
+  <script src="jquery-ui.min.js"></script>
+  <script>
+  var ipcRenderer = require('electron').ipcRenderer;
+  const config = require('../config.json');
+  if (typeof process === 'object') {
+    // console.log(config);
+    const scripts = [];
+
+    if (process.env.NODE_ENV === 'development') {
+      // Dynamically insert the DLL script in development env in the
+      // renderer process
+      // scripts.push('../dll/renderer.dev.dll.js');
+    }
+    if (process.env.START_HOT) {
+      // Dynamically insert the bundled app script in the renderer process
+      const port = process.env.PORT || 1212;
+      scripts.push(`http://localhost:${port}/dist/login.js`);
+    } else {
+      scripts.push('../login.js');
+    }
+
+    if (scripts.length) {
+      document.write(
+        scripts
+          .map(script => `<script defer src="${script}"><\/script>`)
+          .join('')
+      );
+    }
+  }
+
+  </script>
+</head>
+<body draggable="false" class="noselect">
+  <div class="wrapper">
+    <form class="login">
+      <p><script>document.writeln(config.appName)</script></p>
+      <p class="title">Accedi al gestionale</p>
+      <input id="username" type="text" placeholder="Username" autofocus/>
+      <i class="fa fa-user"></i>
+      <input id="password" type="password" placeholder="Password" />
+      <i class="fa fa-key"></i>
+      <button>
+        <i class="spinner"></i>
+        <span class="state">Accedi</span>
+      </button>
+    </form>
+    </p>
+  </div>
+</body>

@@ -1,0 +1,58 @@
+@import "variables";
+@import "~bootstrap/scss/bootstrap";
+@import "custom/structure/sidemenu";
+@import "custom/structure/chatleftsidebar";
+@import "custom/structure/user-chat";
+@import "custom/backgrounds";
+@import "custom/helper";
+@import "custom/avatar";
+
+.blank-div{width:36px;height:36px}
+
+.verticalFlex {
+  display: flex;
+  flex-direction: column;
+}
+.chatInputWrapper {
+  // height: 150px;
+  // max-height: 250px;
+  // overflow-y: auto;
+}
+
+/* RTA
+       ========================================================================== */
+
+    .rta {
+      position: relative;
+      // border-left: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .rta__autocomplete {
+      position: absolute;
+      width: 300px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .rta__autocomplete ul {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 0;
+    }
+
+    .rta__autocomplete li {
+      margin-bottom: 5px;
+      padding: 3px 20px;
+      cursor: pointer;
+    }
+
+    .rta__autocomplete li:hover {
+      background-color: skyblue;
+    }
+
+    .rta textarea.form-control {
+      height: calc(1.5em + 1rem + 2px);
+    }

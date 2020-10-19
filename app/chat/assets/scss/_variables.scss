@@ -1,0 +1,146 @@
+// Variables
+
+//
+// custom-variables
+//
+
+// Vertical Sidebar - Default Light
+$sidebar-bg: #ffffff;
+$sidebar-menu-item-color: #878a92;
+$sidebar-menu-item-active-color: #7269ef;
+$sidebar-menu-item-active-bg: #f7f7ff;
+$sidebar-sub-bg:  #f5f7fb;
+$sidebar-sub-bg:  #fbf8f5;
+
+// Display
+$display-none: none;
+$display-block: block;
+
+// Font Weight
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+
+// Font Family
+$font-family-secondary: 'Public Sans', sans-serif;
+
+// Chat
+$chat-primary-bg:     #7269ef;
+$chat-primary-bg:     #e8e8e8;
+$chat-primary-text-color: #303030;
+$chat-secondary-bg:     #f5f7fb;
+$chat-secondary-bg:     #dcf8c6;
+$chat-secondary-text-color: #303030;
+
+
+// Theme mode icon
+$theme-mode-icon:       "\eefb";
+
+
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Color system
+
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #f5f7fb;
+$gray-300: #f0eff5;
+$gray-400: #e6ebf5;
+$gray-500: #adb5bd;
+$gray-600: #7a7f9a;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+$grays: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
+
+$blue:    #7269ef;
+$indigo:  #564ab1;
+$purple:  #8e4aec;
+$pink:    #e83e8c;
+$red:     #EF476F;
+$orange:  #FC814A;
+$yellow:  #FFD166;
+$green:   #06D6A0;
+$teal:    #050505;
+$cyan:    #50a5f1;
+
+$colors: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "indigo":     $indigo,
+    "purple":     $purple,
+    "pink":       $pink,
+    "red":        $red,
+    "orange":     $orange,
+    "yellow":     $yellow,
+    "green":      $green,
+    "teal":       $teal,
+    "cyan":       $cyan,
+    "white":      $white,
+    "gray":       $gray-600,
+    "gray-dark":  $gray-800
+  ),
+  $colors
+);
+
+$primary:       $blue;
+$secondary:     $gray-600;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-400;
+$dark:          $gray-800;
+
+$theme-colors: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "pink":       $pink,
+    "light":      $light,
+    "dark":       $dark
+  ),
+  $theme-colors
+);
+
+// Set a specific jump point for requesting color jumps
+$theme-color-interval:      8%;
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold:  200;
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark:             $gray-900;
+$yiq-text-light:            $white;
+
+$font-size-base:              0.9375rem;
+$font-size-lg:                $font-size-base * 1;
+$font-size-sm:                $font-size-base * .875;
+$input-focus-box-shadow:      none;

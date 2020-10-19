@@ -1,0 +1,7 @@
+{
+  "appName": "Serfin 97 s.r.l. - Agent",
+  "appUrl": "http://localhost:8080",
+  "apiUrl": "http://localhost:8080/api",
+  "socketIoUrl": "http://localhost:8080",
+  "allowedDomains": ["s97.local"]
+}
